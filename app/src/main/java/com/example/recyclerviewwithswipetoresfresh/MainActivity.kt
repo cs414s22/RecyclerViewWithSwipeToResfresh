@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
         // The for loop will generate [size] amount of contact data and store in a list
         for (i in 1..size) {
-            // index of the loop is concatenate to the end of the url to generate unique image each time
+            // i is concatenated to the end of the url to generate unique image each time
             val imageLink = "https://picsum.photos/150?random=$i"
             val person = Contact("John Doe-$i", i, imageLink)
             contacts.add(person)
