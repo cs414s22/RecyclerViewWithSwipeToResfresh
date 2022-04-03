@@ -15,8 +15,8 @@ class MyRecyclerAdapter(private val contacts: ArrayList<Contact>): RecyclerView.
     private val TAG = "MyRecyclerAdapter"
     var count = 1 //This variable is used for just testing purpose to understand how RecyclerView works
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
+    // Provide a reference to the views for each data item
+    // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder.
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         // This class will represent a single row in our recyclerView list
@@ -59,7 +59,7 @@ class MyRecyclerAdapter(private val contacts: ArrayList<Contact>): RecyclerView.
         return MyViewHolder(view)
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    // Replace/bind the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
@@ -82,7 +82,7 @@ class MyRecyclerAdapter(private val contacts: ArrayList<Contact>): RecyclerView.
         //Log.d(TAG, "onBindViewHolder: $position")
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount(): Int {
         return contacts.size
     }
